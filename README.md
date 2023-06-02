@@ -101,6 +101,7 @@ public class CurrencyConverter {//Conversor de moeda
 }
  
 ```
+---
 #Parte3 Construtores, this, sobrecarga,encapsulamento
 
 Realizei um exercício com o objetivo de aprofundar minha compreensão sobre a importância do encapsulamento, além de reforçar meus conhecimentos sobre construtores, métodos getters e setters. Nesse exercício, criei uma classe com atributos privados e utilizei construtores para inicializá-los corretamente. Em seguida, implementei métodos getters e setters para acessar e modificar esses atributos de maneira controlada.
@@ -108,3 +109,51 @@ Realizei um exercício com o objetivo de aprofundar minha compreensão sobre a i
 Para expandir meu aprendizado, introduzi uma estrutura condicional switch no programa. Essa estrutura me permitiu criar diferentes casos de uso para os métodos getters e setters, o que me ajudou a compreender melhor como essas funções podem ser úteis em diferentes situações.
 
 Esse exercício foi extremamente valioso, pois me permitiu consolidar meu conhecimento sobre encapsulamento e demonstrou a importância de utilizar construtores, getters e setters de forma adequada. Além disso, ao introduzir o switch, pude ampliar minha compreensão sobre estruturas condicionais e como elas podem ser combinadas com os princípios de encapsulamento para criar código mais eficiente e modular.
+
+```java
+package parte3ConstrutoresThisSobrecargaEncapsulamentoEntities;
+
+public class Conta {
+	
+	private String name;
+	private Integer numeroConta;
+	private double saldo;
+	public Conta(String name, Integer numeroConta, double saldo) {
+		super();
+		this.name = name;
+		this.numeroConta = numeroConta;
+		deposito(saldo);//importante conceito que protege o programa de mudanças futuras
+	}
+	public Conta(String name, Integer numeroConta) {
+		super();
+		this.name = name;
+		this.numeroConta = numeroConta;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getNumeroConta() {
+		return numeroConta;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	@Override
+	public String toString() {
+		return name
+				+ "\nnumeroConta= " + numeroConta 		
+				+ "\nsaldo= " + saldo;
+	}
+	public double deposito(double deposito) {
+		return saldo += deposito;
+	}
+	public double saque(double saque) {
+		return saldo -= (saque +  5.00);
+	}
+	
+	}
+
+```
