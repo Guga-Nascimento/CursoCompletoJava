@@ -157,3 +157,26 @@ public class Conta {
 	}
 
 ```
+---
+#Parte4 Mémoria,Vetores,Matrizes e Listas
+
+
+Neste primeiro tópico da Parte 4, foram realizados doze exercícios com foco em solidificar o conhecimento sobre a criação de vetores e toda a lógica por trás dessa estrutura de repetição. Agora, avançaremos para a próxima fase, na qual estudaremos matrizes.
+
+```java
+/* For com estrutura condicional if para descobrir em qual percentual o dados
+   recebidos se encaixam, conforme o solicitado pelo exercicio*/ 
+for (int i = 0; i < nome.length; i++) {
+	          
+	if (precoVenda[i] < precoCompra[i] + (precoCompra[i] * 0.10)) {
+	menosDe10++;
+		} else if (precoVenda[i] >= precoCompra[i] + (precoCompra[i] * 0.10)
+		&& precoVenda[i] <= precoCompra[i] + (precoCompra[i] * 0.20)) {
+				entre10e20++;
+		} else if (precoVenda[i] > (precoCompra[i] + (precoCompra[i] * 0.20))) {
+				maiorQue20++;
+	    }
+	}
+```
+
+
