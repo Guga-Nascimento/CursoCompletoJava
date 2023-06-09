@@ -185,3 +185,32 @@ Através do estudo de matrizes em Java, pude aprimorar minhas habilidades de pro
 
 ![Exercicio](foto.png "Guga-Nascimento")
 
+Também tive uma breve introdução em collections
+---
+#Parte5  Data e Hora (ISO 8601)
+
+![Exercicio](foto1.png "Guga-Nascimento")
+
+Representação de datas e horas:
+
+Para criar um objeto LocalDate, você pode usar os métodos estáticos of, parse ou now.
+Para criar um objeto LocalTime, você também pode usar os métodos estáticos of, parse ou now.
+Para criar um objeto LocalDateTime, você pode combinar objetos LocalDate e LocalTime.
+Para criar um objeto ZonedDateTime, você pode usar LocalDateTime juntamente com um objeto ZoneId.
+Para criar um objeto Instant, você pode usar o método estático now.
+Manipulação de datas e horas:
+
+Você pode usar vários métodos para manipular objetos de data e hora, como plus, minus, with, get, isBefore, isAfter, etc.
+Esses métodos retornam um novo objeto, pois os objetos LocalDate, LocalTime e LocalDateTime são imutáveis.
+Formatação e análise de strings:
+
+A classe DateTimeFormatter permite formatar objetos de data e hora em strings legíveis e analisar strings em objetos de data e hora.
+Você pode usar um DateTimeFormatter predefinido ou criar um formato personalizado.
+Cálculos com períodos e durações:
+
+A classe Period é usada para representar um período de tempo em termos de anos, meses e dias.
+A classe Duration é usada para representar uma duração em termos de horas, minutos, segundos e nanossegundos.
+
+
+
+
