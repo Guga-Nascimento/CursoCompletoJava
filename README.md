@@ -178,5 +178,10 @@ for (int i = 0; i < nome.length; i++) {
 	    }
 	}
 ```
+Ao estudar matrizes em Java, aprendi a realizar diversas operações, como adição, subtração e multiplicação entre matrizes. Também descobri como realizar a transposição de uma matriz, trocando as linhas pelas colunas, e como calcular a matriz inversa utilizando métodos matemáticos adequados. Além disso, Java oferece recursos para percorrer e manipular os elementos de uma matriz, facilitando a implementação de algoritmos que envolvam processamento de dados matriciais.
 
+Através do estudo de matrizes em Java, pude aprimorar minhas habilidades de programação e compreender melhor a aplicação desses conceitos em soluções computacionais
+
+
+![Exercicio](foto.png "Guga-Nascimento")
 

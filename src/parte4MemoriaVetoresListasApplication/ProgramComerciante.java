@@ -43,32 +43,27 @@ public class ProgramComerciante {
 			if (precoVenda[i] < precoCompra[i] + (precoCompra[i] * 0.10)) {
 				menosDe10++;
 			} else if (precoVenda[i] >= precoCompra[i] + (precoCompra[i] * 0.10)
-					&&     precoVenda[i] <= precoCompra[i] + (precoCompra[i] * 0.20)) {
+					&& precoVenda[i] <= precoCompra[i] + (precoCompra[i] * 0.20)) {
 				entre10e20++;
-			} else if(precoVenda[i] > (precoCompra[i] + (precoCompra[i] * 0.20))) {
+			} else if (precoVenda[i] > (precoCompra[i] + (precoCompra[i] * 0.20))) {
 				maiorQue20++;
 			}
 		}
+			
 		for (int i = 0; i < nome.length; i++) {// for para somar o total de compras e o total de vendas
 			valorCompra += precoCompra[i];
 			valorVenda += precoVenda[i];
 		}
 		double lucro = valorVenda - valorCompra;
-		/*
-		 * RELATORIO: Lucro abaixo de 10%: 1 Lucro entre 10% e 20%: 2 Lucro acima de
-		 * 20%: 1 Valor total de compra: 30.00 Valor total de venda: 33.50 Lucro total:
-		 * 3.50
-		 */
-		System.out.printf("        RELATORIO\n Lucro abaixo de 10%%: %d\n"
-				+ " Lucro entre 10%% e 20%%: %d\n"
-				+ " Lucro acima de 20%%: %d\n"
-				+ " Valor total de compra: %.2f\n"
-				+ " Valor total de Venda: %.2f\n"
-				+ " Lucro total %.2f\n",menosDe10, entre10e20, maiorQue20, valorCompra, valorVenda, lucro);    
 
-			
+		System.out.println(String.format("        RELATORIO\n Lucro abaixo de 10%%: %d\n" + " Lucro entre 10%% e 20%%: %d\n"
+				+ " Lucro acima de 20%%: %d\n" + " Valor total de compra: %.2f\n"
+				+ " Valor total de Venda: %.2f\n" + " Lucro total %.2f\n",
+				menosDe10, entre10e20, maiorQue20, valorCompra, valorVenda, lucro));
+				
+
 		sc.close();
-		
+
 	}
 
 }
