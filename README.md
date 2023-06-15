@@ -54,7 +54,7 @@ public class ProgramEmployee {
 ```
 ---
 
-#PARTE 2: Membros estáticos
+# PARTE 2: Membros estáticos
 
 Nesse exercício sobre membros estáticos, foi evidente a importância da utilização da palavra-chave "static". Essa importação se faz necessária, pois ela permite que os métodos ou atributos possam ser acessados sem a necessidade de se instanciar um objeto. Além disso, foi possível praticar o conceito de criação de constantes utilizando métodos e atributos estáticos.
 
@@ -102,7 +102,7 @@ public class CurrencyConverter {//Conversor de moeda
  
 ```
 ---
-#Parte3 Construtores, this, sobrecarga,encapsulamento
+# Parte3 Construtores, this, sobrecarga,encapsulamento
 
 Realizei um exercício com o objetivo de aprofundar minha compreensão sobre a importância do encapsulamento, além de reforçar meus conhecimentos sobre construtores, métodos getters e setters. Nesse exercício, criei uma classe com atributos privados e utilizei construtores para inicializá-los corretamente. Em seguida, implementei métodos getters e setters para acessar e modificar esses atributos de maneira controlada.
 
@@ -158,7 +158,7 @@ public class Conta {
 
 ```
 ---
-#Parte4 Mémoria,Vetores,Matrizes e Listas
+# Parte4 Mémoria,Vetores,Matrizes e Listas
 
 
 Neste primeiro tópico da Parte 4, foram realizados doze exercícios com foco em solidificar o conhecimento sobre a criação de vetores e toda a lógica por trás dessa estrutura de repetição. Agora, avançaremos para a próxima fase, na qual estudaremos matrizes.
@@ -186,8 +186,9 @@ Através do estudo de matrizes em Java, pude aprimorar minhas habilidades de pro
 ![Exercicio](foto.png "Guga-Nascimento")
 
 Também tive uma breve introdução em collections
+
 ---
-#Parte5  Data e Hora (ISO 8601)
+# Parte5  Data e Hora (ISO 8601)
 
 ![Exercicio](foto1.png "Guga-Nascimento")
 
@@ -210,6 +211,106 @@ Cálculos com períodos e durações:
 
 A classe Period é usada para representar um período de tempo em termos de anos, meses e dias.
 A classe Duration é usada para representar uma duração em termos de horas, minutos, segundos e nanossegundos.
+---
+# Parte6  Enumeração e Composição.
+
+Enumeração: A enumeração é um tipo de dado utilizado para armazenar um conjunto de valores constantes. É uma forma de definir um novo tipo de dados que consiste em um conjunto fixo de constantes nomeadas. Cada constante na enumeração representa um valor específico dentro do conjunto.
+
+Composição: A composição refere-se à relação entre classes, onde uma classe é composta por outras classes. É uma forma de organizar e estruturar objetos complexos, combinando vários objetos menores em uma única entidade.
+
+![Exercicio](foto4.png "Guga-Nascimento")
+
+Na parte 6 do nosso estudo, exploramos a fascinante área da programação, onde mergulhamos em três programas distintos. Cada um desses programas foi cuidadosamente projetado para atender a diferentes necessidades e desafios.
+
+Ao desenvolver esses programas, tivemos a oportunidade de trabalhar com um total de nove entidades distintas. Cada entidade representava um componente essencial dentro do contexto dos programas, contribuindo para a sua funcionalidade e execução correta.
+
+Além disso, buscamos aprimorar nossos conhecimentos ao criar dois enums. Esses enums foram utilizados para armazenar conjuntos específicos de valores constantes, fornecendo uma forma prática e organizada de representar e manipular esses conjuntos dentro dos programas.
+
+![Exercicio](foto2.png "Guga-Nascimento")
+
+Na foto acima, podemos observar um programa que realiza o cálculo de contratos para um trabalhador. O programa segue os seguintes passos: primeiro, é solicitado o nome do departamento ao qual o trabalhador pertence. Em seguida, são requisitados os dados do trabalhador, como nome, nível e salário base.
+
+Utilizando a enumeração, podemos converter a string recebida para o tipo enum adequado por meio do método valueOf. Dessa forma, podemos criar uma instância do objeto trabalhador, incluindo a instância do departamento ao qual ele pertence. O departamento, por sua vez, possui apenas um atributo, que é armazenado durante a instanciação.
+
+
+Na foto acima, podemos ver que aplicamos a estrutura de repetição for para receber o número de contratos e guardar seus dados na lista contrato. Essa lista foi criada e instanciada na classe Trabalhador.
+
+Utilizando o for, percorremos um determinado intervalo de vezes, definido pelo número de contratos informados. Durante cada iteração, solicitamos os dados específicos de cada contrato, como data, valor e descrição. Esses dados são então armazenados em um objeto contrato, que é adicionado à lista contrato.
+
+Dessa forma, conseguimos registrar e manter um histórico dos contratos realizados pelo trabalhador, facilitando a análise e manipulação dessas informações posteriormente.
+
+A utilização do for em conjunto com a lista contrato permite uma maneira eficiente de coletar e organizar os dados dos contratos, proporcionando um melhor controle e acompanhamento das atividades do trabalhador.
+System.out.println();
+
+
+Por fim, utilizamos o método substring para obter o mês e o ano a partir da data dos contratos, visando uma conferência mais específica. Além disso, chamamos o método calcular, que também merece destaque pelo uso da classe Calendar.
+```java
+	System.out.println();
+		System.out.println("Entre com o mês e o ano para calcular o salário: ");
+		String mesEano = sc.next();
+		int mes = Integer.parseInt(mesEano.substring(0, 2));
+		int ano = Integer.parseInt(mesEano.substring(3));
+		System.out.println("Name: " + trabalhador.getName());
+		System.out.println("Departamento: "+ trabalhador.getDepartamento().getName());
+		System.out.println("Calculo: " + mesEano + ": "+ String.format("%.2f,",trabalhador.calcular(ano, mes)));
+		sc.close();
+```
+
+Em seguida, chamamos o método calcular, para realiza o cálculo ou processamento com base nas informações dos contratos. É interessante mencionar que esse método utiliza a classe Calendar, que oferece uma ampla gama de recursos para lidar com datas, como manipulação, formatação e cálculos avançados.
+
+O uso da classe Calendar adiciona uma camada de funcionalidade e precisão ao programa, permitindo que as datas sejam tratadas de forma adequada e eficiente.
+
+Em resumo, o uso do substring para obter o mês e o ano, juntamente com a utilização da classe Calendar, demonstra uma abordagem detalhada e cuidadosa na manipulação e processamento de dados relacionados aos contratos do trabalhador.
+
+
+```java
+public double calcular(int ano,int mes) {
+		double soma = salarioBase;
+		Calendar cal = Calendar.getInstance();//CLASSE CALENDAR 
+		
+		for(ContratoPorHora c : contratos) {
+			cal.setTime(c.getData());
+			int cAno = cal.get(Calendar.YEAR);
+			int cMes = 1 + cal.get(Calendar.MONTH);
+			if (ano == cAno && mes == cMes) {
+				soma+= c.valorTotal();
+			}
+		}
+		return soma;
+	}
+	
+```
+![Exercicio](foto3.png "Guga-Nascimento")
+
+O StringBuilder é uma classe do Java que nos permite construir e manipular strings de forma eficiente, especialmente quando precisamos realizar várias operações de concatenação ou modificação em uma mesma string.
+
+No contexto do programa que recebe os pedidos de um cliente , o StringBuilder pode ser usado para criar uma representação formatada dos itens do pedido, consolidando todas as informações relevantes em uma única string. Dessa forma, podemos exibir ou armazenar os contratos de forma mais legível e organizada.
+
+O StringBuilder oferece métodos para adicionar, substituir ou remover caracteres em uma string sem a necessidade de criar objetos adicionais a cada operação. Isso resulta em melhor desempenho e consumo de memória reduzido.
+
+Portanto, ao utilizar o StringBuilder em nosso programa, garantimos uma manipulação mais eficiente e otimizada das strings relacionadas aos contratos, contribuindo para um código mais limpo e performático.
+```java
+@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Momento do Pedido: ");
+		sb.append(sdf.format(momento) + "\n");
+		sb.append("Order status: ");
+		sb.append(status + "\n");
+		sb.append("Cliente: ");
+		sb.append(cliente + "\n");
+		sb.append("Itens do pedido :\n");
+		for (ItemDoPedido item : itens) {
+			sb.append(item + "\n");
+		}
+		sb.append("Preço Total : $");
+		sb.append(String.format("%.2f", total()));
+		return sb.toString();
+	}
+
+	
+```
+---
 
 
 
