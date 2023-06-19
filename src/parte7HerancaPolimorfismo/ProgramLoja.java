@@ -1,6 +1,6 @@
 package parte7HerancaPolimorfismo;
 
-import java.text.ParseException;
+import java.text.ParseException; 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import parte7HerancaPolimorfismo.entidades.Empregado;
+
 import parte7HerancaPolimorfismo.entidades.ProdutoImportado;
 import parte7HerancaPolimorfismo.entidades.ProdutoNacional;
 import parte7HerancaPolimorfismo.entidades.ProdutoUsado;

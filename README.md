@@ -312,6 +312,59 @@ Portanto, ao utilizar o StringBuilder em nosso programa, garantimos uma manipula
 ```
 ---
 
+# Parte7  Herança e Polimorfismo.
+
+Herança:
+A herança é um conceito fundamental na programação orientada a objetos, e Java suporta esse conceito através das classes. Em Java, você pode criar novas classes baseadas em classes existentes, chamadas de classes derivadas ou subclasse. A classe derivada herda características, métodos e campos da classe base, chamada de superclasse. A herança permite reutilizar o código existente e estabelecer relações hierárquicas entre classes. Para criar uma classe derivada, você usa a palavra-chave extends. 
+```java
+
+public class Circulo extends Formas{
+	
+	private Double raio;
+	
+	public Circulo() {
+		super();
+	}
+	
+	public Circulo(Cor cor, Double raio) {
+		super(cor);
+		this.raio = raio;
+	}
+	
+```
+Polimorfismo:
+Polimorfismo é outro conceito importante da programação orientada a objetos. Em Java, o polimorfismo permite que um objeto seja tratado de várias maneiras, dependendo do contexto em que é usado. Em outras palavras, um objeto pode assumir várias formas. O polimorfismo é alcançado através de dois mecanismos: sobrescrita de métodos e ligação dinâmica. A sobrescrita de métodos ocorre quando uma classe derivada fornece sua própria implementação de um método já definido na superclasse. A ligação dinâmica ocorre em tempo de execução, onde o método correto é chamado com base no tipo real do objeto.
+
+
+```java
+
+if(ch == 's') {
+				System.out.print("Valor do Adicional:  ");
+				Double adicionalTercerizacao = sc.nextDouble();
+				list.add(new EmpregadoTercerizado(nome, horas, valorHora, adicionalTercerizacao));
+			}else {
+				list.add(new Empregado(nome, horas, valorHora));
+			 }
+		}
+		
+```
+Agradecimentos Finais e Resumo.
+
+Durante o curso, mergulhei nos fundamentos da programação orientada a objetos (OOP) utilizando a linguagem Java como base. Comecei aprendendo a sintaxe básica, manipulação de variáveis e estruturas de controle. À medida que avançávamos, exploramos conceitos mais complexos, como classes, objetos, herança, polimorfismo, encapsulamento e abstração.
+
+Uma das partes fundamentais do curso foi a compreensão dos membros estáticos e seu uso adequado. A palavra-chave "static" desempenhou um papel crucial ao permitir o acesso a métodos e atributos sem a necessidade de instanciar objetos. Também aprendemos a utilizar os métodos "System.out" e "System.err" para exibir informações no terminal, diferenciando-as visualmente.
+
+Outro tópico abordado foi o uso de construtores, as palavras-chave "this" e "super" para referenciar atributos e métodos, e a importância do encapsulamento. Aprendemos a criar classes com atributos privados e a utilizar métodos getters e setters para acessar e modificar esses atributos de forma controlada.
+
+Na Parte 4 do curso, nos aprofundamos na criação e manipulação de vetores e avançamos para o estudo de matrizes. Compreendemos a importância da lógica por trás dessas estruturas e sua aplicação em problemas reais.
+
+Exploramos também o tratamento de datas e horas utilizando o padrão ISO 8601. Aprendemos a criar objetos LocalDate, LocalTime, LocalDateTime, ZonedDateTime e Instant, bem como a manipular e formatar essas informações.
+
+Na parte final do curso, abordamos a enumeração e a composição. A enumeração nos permitiu criar um conjunto de valores constantes e a composição nos ensinou a organizar objetos complexos, combinando várias classes em uma única entidade.
+
+Por fim, estudamos a herança e o polimorfismo. A herança nos permitiu criar classes derivadas que herdam características da superclasse, possibilitando a reutilização de código. O polimorfismo, por sua vez, nos permitiu tratar objetos de várias formas, com base no contexto em que são utilizados.
+
+Gostaríamos de agradecer ao professor Nélio Alves por seu comprometimento e dedicação em compartilhar seu conhecimento conosco. Sua didática clara e envolvente nos permitiu absorver os conceitos de forma eficaz, e sua disponibilidade em esclarecer dúvidas foi fundamental para o nosso crescimento.
 
 
 
